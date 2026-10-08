@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOIRSOLE — Sneakers & Streetwear</title>
+  <meta name="description" content="NOIRSOLE — Sneakers seleccionados y streetwear.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="index.html">NOIRSOLE</a>
+    <nav>
+      <a href="#shop">SHOP</a>
+      <a href="#collections">COLLECTIONS</a>
+      <a href="#about">ABOUT</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})" aria-label="Buscar">⌕</button>
+      <button class="cart-btn" onclick="openCart()">BAG <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">NEW DROP // 2026</p>
+        <h1>NOIRSOLE<br>STUDIO</h1>
+        <p class="hero-copy">Sneakers seleccionados. Streetwear sin ruido.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-light" href="#shop">SHOP NOW</a>
+          <a class="btn btn-outline" href="#collections">VIEW COLLECTION</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">CURATED SELECTION</p>
+          <h2>LATEST<br><span>DROPS</span></h2>
+        </div>
+        <a href="#shop">VIEW ALL →</a>
+      </div>
+
+      <div class="products">
+        <article class="product-card">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=85" alt="Sneaker rojo">
+            <span class="tag">NEW</span>
+          </div>
+          <div class="product-info">
+            <div><h3>NOIR RUSH 01</h3><p>Red / White</p></div>
+            <strong>$2,499 MXN</strong>
+          </div>
+          <button class="add-btn" onclick="addToCart('NOIR RUSH 01',2499)">ADD TO BAG</button>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1543508282-6319a3e2621f?auto=format&fit=crop&w=1200&q=85" alt="Sneaker blanco">
+            <span class="tag">DROP 02</span>
+          </div>
+          <div class="product-info">
+            <div><h3>MONO 02</h3><p>Triple White</p></div>
+            <strong>$2,799 MXN</strong>
+          </div>
+          <button class="add-btn" onclick="addToCart('MONO 02',2799)">ADD TO BAG</button>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1200&q=85" alt="Sneaker urbano">
+            <span class="tag">LIMITED</span>
+          </div>
+          <div class="product-info">
+            <div><h3>SHADOW 03</h3><p>Black / Grey</p></div>
+            <strong>$3,199 MXN</strong>
+          </div>
+          <button class="add-btn" onclick="addToCart('SHADOW 03',3199)">ADD TO BAG</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="manifesto" id="collections">
+      <div class="manifesto-image"></div>
+      <div class="manifesto-text">
+        <p class="section-kicker">NOIRSOLE / 001</p>
+        <h2>BUILT FOR<br>THE CITY.</h2>
+        <p>Una selección enfocada en siluetas, materiales y actitud. NOIRSOLE nace para quienes prefieren destacar sin pedir permiso.</p>
+        <a class="text-link" href="#shop">EXPLORE THE DROP →</a>
+      </div>
+    </section>
+
+    <section class="features">
+      <div><span>01</span><h3>CURATED</h3><p>Modelos seleccionados para cada drop.</p></div>
+      <div><span>02</span><h3>SECURE</h3><p>Compra y checkout preparados para integrar tu proveedor de pagos.</p></div>
+      <div><span>03</span><h3>MX SHIPPING</h3><p>Envíos a todo México. La logística real se conecta después.</p></div>
+    </section>
+  </main>
+
+  <footer id="about">
+    <div>
+      <a class="logo" href="index.html">NOIRSOLE</a>
+      <p>Independent sneaker store / Mexico.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#shop">Shop</a>
+      <a href="#collections">Collections</a>
+      <a href="checkout.html">Checkout</a>
+    </div>
+    <p class="copyright">© 2026 NOIRSOLE. ALL RIGHTS RESERVED.</p>
+  </footer>
+
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-header"><h2>YOUR BAG</h2><button onclick="closeCart()">×</button></div>
+    <div id="cartItems" class="cart-items"><p class="empty">Tu carrito está vacío.</p></div>
+    <div class="cart-total"><span>TOTAL</span><strong id="cartTotal">$0 MXN</strong></div>
+    <a class="checkout-btn" href="checkout.html">GO TO CHECKOUT</a>
+  </div>
+  <div class="cart-backdrop" id="cartBackdrop" onclick="closeCart()"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

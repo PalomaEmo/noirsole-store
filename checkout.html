@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — NOIRSOLE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="checkout-page">
+  <header class="nav simple-nav">
+    <a class="logo" href="index.html">NOIRSOLE</a>
+    <a href="index.html" class="back-link">← BACK TO SHOP</a>
+  </header>
+
+  <main class="checkout">
+    <div class="checkout-main">
+      <p class="section-kicker">SECURE CHECKOUT</p>
+      <h1>COMPLETE<br>YOUR ORDER.</h1>
+
+      <div class="checkout-box">
+        <h2>CONTACT</h2>
+        <input type="email" placeholder="Email">
+      </div>
+
+      <div class="checkout-box">
+        <h2>SHIPPING ADDRESS</h2>
+        <div class="two-col">
+          <input placeholder="Nombre">
+          <input placeholder="Apellidos">
+        </div>
+        <input placeholder="Dirección">
+        <div class="two-col">
+          <input placeholder="Ciudad">
+          <input placeholder="Código postal">
+        </div>
+        <input placeholder="Estado">
+      </div>
+
+      <div class="checkout-box">
+        <h2>PAYMENT</h2>
+        <p class="muted">Esta es una pantalla de demostración. Puedes conectar Stripe, Mercado Pago, PayPal u otro proveedor posteriormente.</p>
+        <button class="fake-pay" onclick="alert('Demo: aquí conectarías tu proveedor de pagos.')">PAY NOW — DEMO</button>
+      </div>
+    </div>
+
+    <aside class="order-summary">
+      <p class="section-kicker">ORDER SUMMARY</p>
+      <div id="checkoutItems"></div>
+      <div class="summary-total"><span>TOTAL</span><strong id="checkoutTotal">$0 MXN</strong></div>
+    </aside>
+  </main>
+  <script src="script.js"></script>
+  <script>renderCheckout();</script>
+</body>
+</html>
